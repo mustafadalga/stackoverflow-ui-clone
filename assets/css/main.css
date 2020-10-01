@@ -117,6 +117,7 @@
   --highlight-variable: #54790d;
   --highlight-addition: #2f6f44;
   --highlight-deletion: #c02d2e;
+  --dark-blue:#2b2d6e;
 }
 
 @font-face {
@@ -156,9 +157,13 @@ html {
 
 .container {
   width: 100%;
-  height: inherit;
   max-width: 126.4rem;
   margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+section {
+  padding: 5rem 0;
 }
 
 ul {
@@ -182,6 +187,15 @@ img {
   font-size: 1.3rem;
   padding: 0.8rem 1rem;
   border-radius: 3px;
+  transition: all 0.5s;
+}
+
+.btn-orange {
+  background-color: var(--orange);
+}
+
+.btn-dark-blue {
+  background-color: var(--dark-blue);
 }
 
 /* Header */
@@ -190,6 +204,13 @@ header {
   height: 50px;
   background-color: var(--black-025);
   border-top: 3px solid var(--orange);
+}
+
+.nav-container {
+  width: 100%;
+  height: 100%;
+  max-width: 126.4rem;
+  margin: 0 auto;
 }
 
 nav {
@@ -206,9 +227,6 @@ nav {
 
 .hamburger-menu-container {
   height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   cursor: pointer;
   position: relative;
 }
@@ -220,13 +238,13 @@ nav {
   background-color: var(--silver-lighter);
 }
 .hamburger-menu-container.open .hamburger-menu .line:nth-of-type(1) {
-  transform: rotateZ(-45deg) translate(-0.4rem, 0.5rem);
+  transform: rotateZ(-45deg) translate(-0.3rem, 0.5rem);
 }
 .hamburger-menu-container.open .hamburger-menu .line:nth-of-type(2) {
   display: none;
 }
 .hamburger-menu-container.open .hamburger-menu .line:nth-of-type(3) {
-  transform: rotateZ(45deg) translate(-0.5rem, -0.6rem);
+  transform: rotateZ(45deg) translate(-0.2rem, -0.3rem);
 }
 .hamburger-menu-container.open .nav-dropdown-menu {
   display: flex;
@@ -235,7 +253,7 @@ nav {
 .hamburger-menu {
   width: 4rem;
   height: inherit;
-  padding: 1rem;
+  padding: 1.5rem 1.1rem;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -402,11 +420,151 @@ nav {
   color: var(--blue-700);
   border: 1px solid var(--blue-300);
 }
+.btn-login:hover {
+  background-color: var(--blue-200);
+}
 
 .btn-register {
   background-color: var(--blue-500);
   color: var(--white);
   margin-left: 0.5rem;
 }
+.btn-register:hover {
+  background-color: var(--blue-600);
+}
+
+/* End Header */
+/* Hero */
+.hero {
+  background: url("https://cdn.sstatic.net/Img/home/illo-hero-full.svg?v=e2018a5f9272");
+  background-color: #FFCF10;
+  background-repeat: no-repeat;
+  background-position: top center;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 3rem;
+}
+
+.hero-title {
+  color: var(--black-800);
+  font-family: "Roboto Slab Bold", serif;
+  font-weight: bold;
+  font-size: 6rem;
+  text-align: center;
+  max-width: 100%;
+}
+.hero-title span {
+  font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, sans-serif;
+}
+
+.hero-paragraph {
+  margin: 2rem 0;
+  font-size: 2rem;
+  color: var(--black-800);
+  max-width: 40rem;
+  font-weight: 400;
+  text-align: center;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+.hero-options {
+  display: flex;
+}
+.hero-options .btn {
+  padding: 1.3rem 2.5rem;
+}
+
+.btn-developers {
+  background-color: var(--white);
+  color: var(--orange-400);
+  border: 1px solid var(--orange-400);
+}
+
+.btn-businesses {
+  background-color: var(--orange-400);
+  color: var(--white);
+  margin-left: 0.5rem;
+}
+
+/*End Hero*/
+/* For Developers*/
+.section-head {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--black-800);
+}
+
+.section-title {
+  font-size: 3.4rem;
+  font-family: "Roboto Slab Bold", serif;
+  font-weight: 700;
+}
+
+.section-line {
+  width: 64px;
+  height: 8px;
+  margin: 3rem auto;
+  border-radius: 100rem;
+  background-color: var(--orange-400);
+}
+
+.section-description {
+  font-size: 1.7rem;
+  max-width: 52.6rem;
+}
+.section-description a {
+  color: var(--orange-400);
+}
+
+.for-developers .options {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.for-developers .option {
+  flex-basis: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  background-color: var(--white);
+  box-shadow: var(--bs-md);
+}
+.for-developers .option:nth-child(1), .for-developers .option:nth-child(3) {
+  margin-top: 12rem;
+}
+.for-developers .option-title {
+  color: var(--black-800);
+  font-size: 2.1rem;
+  font-weight: 400;
+  margin: 2rem 0;
+}
+.for-developers .option-description {
+  font-size: 1.4rem;
+  color: var(--black-800);
+}
+.for-developers .option-description a {
+  color: var(--orange-400);
+}
+.for-developers .option-button {
+  margin: 2rem 0;
+}
+.for-developers .option-link {
+  color: var(--white);
+  padding: 1.3rem 2.5rem;
+}
+
+/* End For Developers*/
 
 /*# sourceMappingURL=main.css.map */
