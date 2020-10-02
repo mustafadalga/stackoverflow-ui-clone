@@ -118,6 +118,7 @@
   --highlight-addition: #2f6f44;
   --highlight-deletion: #c02d2e;
   --dark-blue:#2b2d6e;
+  --magnolia:#f7f6f9;
 }
 @font-face {
   font-family:"Roboto Slab";font-style:normal;font-weight:400;src:local("Roboto Slab Regular"),local("RobotoSlab-Regular"),local("Roboto Slab 400"),local("RobotoSlab-400"),local("Roboto Slab"),url("../../Fonts/roboto-slab/roboto-slab-regular-webfont.woff?v=a75088a46d79") format("woff")
@@ -169,15 +170,18 @@ img{
   align-items: center;
   justify-content: center;
   font-size: 1.3rem;
-  padding: .8rem 1rem;
   border-radius: 3px;
   transition: all 0.5s;
 }
 .btn-orange{
   background-color:var(--orange);
+  color: var(--white);
+
 }
 .btn-dark-blue{
   background-color:var(--dark-blue);
+  color: var(--white);
+
 }
 
 
@@ -390,6 +394,7 @@ background-color: var(--black-050);
   background-color: var(--powder);
   color: var(--blue-700);
   border: 1px solid var(--blue-300);
+  padding: .8rem 1rem;
   &:hover{
     background-color: var(--blue-200);
   }
@@ -398,6 +403,7 @@ background-color: var(--black-050);
   background-color: var(--blue-500);
   color: var(--white);
   margin-left: .5rem;
+  padding: .8rem 1rem;
   &:hover{
     background-color: var(--blue-600);
   }
@@ -410,9 +416,10 @@ background-color: var(--black-050);
 /* Hero */
 .hero{
   background: url("https://cdn.sstatic.net/Img/home/illo-hero-full.svg?v=e2018a5f9272");
-  background-color: #FFCF10;
   background-repeat: no-repeat;
   background-position: top center;
+  background-color: #FFCF10;
+
   height: 80vh;
   display: flex;
   justify-content: center;
@@ -489,6 +496,7 @@ background-color: var(--black-050);
 .section-description{
   font-size: 1.7rem;
   max-width: 52.6rem;
+  text-align: center;
   a{
     color: var(--orange-400);
   }
@@ -496,7 +504,7 @@ background-color: var(--black-050);
 .for-developers{
   .options{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
   }
   .option{
@@ -508,6 +516,7 @@ background-color: var(--black-050);
     padding: 3rem;
     background-color: var(--white);
     box-shadow: var(--bs-md);
+    border-radius: .7rem;
   }
   .option:nth-child(1),.option:nth-child(3){
     margin-top:12rem;
@@ -520,6 +529,7 @@ background-color: var(--black-050);
   }
   .option-description{
     font-size: 1.4rem;
+    font-weight: 400;
     color: var(--black-800);
     a{
       color: var(--orange-400);
@@ -535,3 +545,241 @@ background-color: var(--black-050);
 }
 
 /* End For Developers*/
+
+
+
+/*For Businesses*/
+.for-businesses{
+  background-color: var(--magnolia);
+  padding: 10rem 0;
+  .options{
+    margin-top: 6rem;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .option{
+    flex-basis: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3.5rem;
+    background-color: var(--white);
+    box-shadow: var(--bs-md);
+    border-radius: .7rem;
+  }
+  .option-description{
+    font-size: 1.7rem;
+    font-weight: 400;
+    margin-left: 1rem;
+    color: var(--black-800);
+  }
+  .option-link{
+    color: var(--orange-400);
+  }
+}
+
+/* End For Businesses */
+
+
+/* Teams*/
+.teams{
+  background: url("https://cdn.sstatic.net/Img/product/teams/illo-teams-pricing.svg?v=8afb8ac7c580");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position:center;
+  background-color: var(--dark-blue);
+  padding: 12rem 0;
+  .options{
+    margin-top: 6rem;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .option{
+    flex-basis: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3.5rem;
+    background-color: var(--white);
+    box-shadow: var(--bs-md);
+    border-radius: .7rem;
+  }
+  .option-description{
+    font-size: 1.7rem;
+    font-weight: 400;
+    margin-left: 1rem;
+    color: var(--black-800);
+  }
+  .option-link{
+    color: var(--orange-400);
+  }
+}
+.teams-head{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--white);
+  text-align: center;
+
+}
+.teams-title{
+  font-size: 3.4rem;
+  font-family: 'Roboto Slab Bold',serif;
+  font-weight: bold;
+  max-width: 55rem;
+}
+.teams-description{
+  font-size: 1.7rem;
+  max-width: 52.6rem;
+  text-align: center;
+  margin: 3rem 0 2rem;
+}
+.teams-details{
+  a{
+    padding: 1.3rem 2.5rem;
+  }
+}
+.teams-plan{
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  margin:10rem auto 0;
+}
+.card{
+  flex: 1 auto;
+  flex-basis: calc(33% - 4rem);
+  display: flex;
+  flex-direction: column;
+  background-color: var(--white);
+  box-shadow: var(--bs-sm);
+  padding: 3rem;
+  border-radius: .7rem;
+  margin:2rem;
+  position: relative;
+}
+.card-body{
+  margin:4rem 0;
+}
+.plan-type{
+  display: inline-block;
+  padding: .5rem 1rem;
+  font-family: 'Roboto Slab',serif;
+  font-size: 1.8rem;
+  font-weight: 500;
+  border-radius: .3rem;
+}
+.card-basic{
+  .plan-type{
+    background-color: var(--black-150);
+    color: var(--black-750);
+  }
+  .btn-card{
+    background-color: var(--black-100);
+    color: var(--black-750);
+
+  }
+}
+.card-business{
+  .plan-type{
+    background-color: var(--black-700);
+    color: var(--white);
+  }
+  .btn-card{
+    background-color: var(--black-700);
+    color: var(--white);
+  }
+}
+.card-enterprise{
+  .plan-type{
+    background-color: var(--dark-blue);
+    color: var(--white);
+  }
+  .btn-card{
+    background-color: var(--dark-blue);
+    color: var(--white);
+  }
+}
+.card-most-used{
+  position: absolute;
+  width: 90%;
+  left: 5%;
+  top:-32px;
+  padding: 1rem 2rem;
+  background-color: var(--black-075);
+  color: var(--black-800);
+  font-size: 1.2rem;
+  font-family: "Source Sans Pro Bold",sans-serif;
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid var(--black-100);
+  border-top-left-radius: .7rem;
+  border-top-right-radius: .7rem;
+}
+.plan-description{
+  color: var(--black-800);
+  font-size: 1.5rem;
+  font-family: 'Roboto Slab',serif;
+  font-weight: 500;
+  margin-top: 2rem;
+}
+.plan-price{
+  border-bottom: 1px solid var(--black-075);
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+}
+.price{
+  font-size: 3.4rem;
+  font-family: 'Roboto Slab Bold',serif;
+  font-weight: 900;
+  color: var(--black-800);
+}
+.per{
+  color: var(--black-350);
+  font-size: 1.3rem;
+  display: block;
+  margin-top: 1rem;
+}
+.plan-features{
+  display: flex;
+  flex-direction: column;
+}
+.plan-feature{
+  margin: .6rem 0;
+  display: flex;
+  align-items: center;
+ i{
+   font-size: 1.8rem;
+   color: var(--black-800);
+ }
+  &:last-child{
+    margin-bottom: 1.5rem;
+  }
+}
+.plan-text{
+  color: var(--black-800);
+  font-size: 1.5rem;
+  font-weight: 400;
+  font-family: "Source Sans Pro",sans-serif;
+  margin-left: 1rem;
+}
+.card-footer{
+  position: absolute;
+  bottom: 3rem;
+  width: calc(100% - 6rem);
+}
+.btn-card{
+  font-size: 1.3rem;
+  font-family: "Source Sans Pro Bold",sans-serif;
+  font-weight: 700;
+  padding: 1.5rem 1rem;
+  &:hover{
+    background-color: var(--blue-500);
+    color: var(--white);
+  }
+}
+/* End Teams*/
+
+
+
