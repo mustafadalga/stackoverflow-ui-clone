@@ -849,3 +849,108 @@ background-color: var(--black-050);
 /* End Hire */
 
 
+/* Questions */
+
+@mixin question-arrow{
+  position: absolute;
+  top: 0;
+  height: 100%;
+  overflow: hidden;
+  width: 1.6rem;
+}
+@mixin question-arrow-content{
+  position: absolute;
+  top: 50%;
+  content: "";
+  width: 1.6rem;
+  height: 1.6rem;
+  background-color: #fff;
+  border: 1px solid #d6d9dc;
+  box-shadow: 2px 0 8px rgba(59, 64, 69, 0.1);
+  transform:translate(-50%,-50%) rotate(45deg) ;
+  transition: all 0.2s;
+}
+
+.questions-content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.questions-header{
+  margin: 3rem 0 6rem;
+}
+.question-title{
+  font-family: 'Roboto Slab Bold',serif;
+  font-weight: 900;
+  color: var(--black-800);
+  font-size: 3.4rem;
+}
+.questions-body{
+  display: flex;
+  justify-content: center;
+}
+.questions-body-item{
+  flex-basis: 20%;
+  display: flex;
+  align-items: center;
+  padding: 1.5rem 5rem 1.5rem 1.5rem;
+  margin-bottom: 2rem;
+  position: relative;
+  cursor: pointer;
+  z-index: 2;
+  &:hover{
+    border-color: transparent;
+    box-shadow: var(--bs-md);
+  }
+  &.active{
+    box-shadow: var(--bs-lg);
+    &:hover{
+      box-shadow: var(--bs-md);
+    }
+    .question-arrow-right{
+      @include question-arrow;
+      left: 100%;
+    }
+    .question-arrow-right:after{
+      @include question-arrow-content;
+    }
+    .question-arrow-left{
+      @include question-arrow;
+      right: 100%;
+    }
+    .question-arrow-left:before{
+      @include question-arrow-content;
+      right: -100%;
+    }
+  }
+}
+.question-item-icon{
+  width: 5rem;
+}
+.question-item-text{
+  margin-left: 1rem;
+  color: var(--black-800);
+  font-size: 1.7rem;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 400;
+}
+.questions-body-item-content{
+  flex-basis: 40%;
+  margin: 0 3rem;
+  display: block;
+  text-align: center;
+
+}
+.question-item-content-text{
+  padding: 4rem 0;
+  font-size: 2.1rem;
+  font-family: 'Roboto Slab',serif;
+  font-weight: 500;
+  color: var(--black-800);
+}
+.question-item-content-btn{
+  margin-top: 2rem;
+  padding: 1.5rem 2.5rem;
+}
+/* End Questions */
