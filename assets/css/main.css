@@ -182,9 +182,7 @@ img {
 }
 
 .btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  text-align: center;
   font-size: 1.3rem;
   border-radius: 3px;
   transition: all 0.5s;
@@ -206,6 +204,10 @@ header {
   height: 50px;
   background-color: var(--black-025);
   border-top: 3px solid var(--orange);
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 99;
 }
 
 .nav-container {
@@ -448,6 +450,7 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 50px;
 }
 
 .hero-content {
@@ -804,7 +807,6 @@ nav {
 }
 
 .btn-card {
-  font-size: 1.3rem;
   font-family: "Source Sans Pro Bold", sans-serif;
   font-weight: 700;
   padding: 1.5rem 1rem;
@@ -814,6 +816,76 @@ nav {
   color: var(--white);
 }
 
+.teams-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 80%;
+  margin: 5rem auto 0;
+}
+.teams-footer img {
+  max-height: 24px;
+  width: initial;
+  margin-right: 1rem;
+}
+
+.teams-footer-item {
+  margin: 2rem;
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  color: var(--black-200);
+}
+
+.teams-footer-text {
+  display: inline-block;
+}
+
 /* End Teams*/
+/* Hire */
+.hire {
+  background-color: var(--magnolia);
+  padding: 10rem 0;
+}
+.hire .container {
+  max-width: 80%;
+}
+
+.hire-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(35rem, 1fr));
+  grid-column-gap: 3rem;
+  grid-row-gap: 6rem;
+}
+
+.hire-item {
+  display: block;
+  color: var(--black-800);
+}
+.hire-item .btn {
+  font-family: "Source Sans Pro Bold", sans-serif;
+  font-weight: 700;
+  padding: 1.5rem 1rem;
+}
+
+.hire-icon {
+  max-width: 7.6rem;
+}
+
+.hire-item-title {
+  font-size: 2.7rem;
+  font-family: "Source Sans Pro Bold", sans-serif;
+  font-weight: 700;
+  margin: 1rem 0;
+}
+
+.hire-item-description {
+  font-size: 1.5rem;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 400;
+  margin-bottom: 3.5rem;
+}
+
+/* End Hire */
 
 /*# sourceMappingURL=main.css.map */
