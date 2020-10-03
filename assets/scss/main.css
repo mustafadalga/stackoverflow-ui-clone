@@ -154,7 +154,7 @@
 html {
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 10px;
-  color: var(--black-800);
+  display: none;
 }
 
 .container {
@@ -174,8 +174,6 @@ ul {
 
 a {
   text-decoration: none;
-  color: var(--blue-600);
-  cursor: pointer;
 }
 
 img {
@@ -211,7 +209,6 @@ header {
   left: 0;
   top: 0;
   z-index: 99;
-  box-shadow: var(--bs-sm);
 }
 
 .nav-container {
@@ -867,7 +864,6 @@ nav {
   color: var(--black-800);
 }
 .hire-item .btn {
-  font-size: 1.5rem;
   font-family: "Source Sans Pro Bold", sans-serif;
   font-weight: 700;
   padding: 1.5rem 1rem;
@@ -899,16 +895,16 @@ nav {
   align-items: center;
   flex-direction: column;
 }
-.questions-content .question-title {
+
+.questions-header {
+  margin: 3rem 0 6rem;
+}
+
+.question-title {
   font-family: "Roboto Slab Bold", serif;
   font-weight: 900;
   color: var(--black-800);
   font-size: 3.4rem;
-  text-align: center;
-}
-
-.questions-header {
-  margin: 3rem 0 6rem;
 }
 
 .questions-body {
@@ -1006,41 +1002,9 @@ nav {
 }
 
 .question-item-content-btn {
+  display: none;
   margin-top: 2rem;
   padding: 1.5rem 2.5rem;
-}
-
-.questions-footer {
-  margin: 20rem 0 10rem;
-  width: 100%;
-}
-
-.questions-grid {
-  margin-top: 6rem;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-  grid-gap: 2.5rem;
-}
-
-.grid-item-img {
-  max-height: 15rem;
-}
-.grid-item-img img {
-  width: auto;
-}
-
-.grid-item-title {
-  font-size: 1.9rem;
-  font-family: "Roboto Slab Bold", serif;
-  font-weight: 700;
-  margin: 2rem 0;
-}
-
-.grid-item-description {
-  font-family: "Source Sans Pro", sans-serif;
-  font-size: 1.5rem;
-  line-height: 19px;
-  font-weight: 400;
 }
 
 /* End Questions */

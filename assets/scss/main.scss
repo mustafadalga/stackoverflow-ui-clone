@@ -120,21 +120,18 @@
   --dark-blue:#2b2d6e;
   --magnolia:#f7f6f9;
 }
-@font-face {
-  font-family:"Roboto Slab";font-style:normal;font-weight:400;src:local("Roboto Slab Regular"),local("RobotoSlab-Regular"),local("Roboto Slab 400"),local("RobotoSlab-400"),local("Roboto Slab"),url("../../Fonts/roboto-slab/roboto-slab-regular-webfont.woff?v=a75088a46d79") format("woff")
-}
 
-@font-face {
-  font-family:"Roboto Slab Bold";font-style:normal;font-weight:700;src:local("Roboto Slab Bold Bold"),local("RobotoSlab Bold-Bold"),local("Roboto Slab Bold 700"),local("RobotoSlab Bold-700"),url("../../Fonts/roboto-slab/roboto-slab-bold-webfont.woff?v=719d1c709127") format("woff")
-}
+@font-face{font-family:"Source Sans Pro";font-style:normal;font-weight:400;src:local("Source Sans Pro Regular"),local("SourceSans Pro-Regular"),local("Source Sans Pro 400"),local("SourceSans Pro-400"),local("Source Sans Pro"),url("https://cdn.sstatic.net/Fonts/source-sans-pro/source-sans-pro-regular-webfont.woff?v=993db0ec4347") format("woff");}
 
-@font-face {
-  font-family:"Source Sans Pro";font-style:normal;font-weight:400;src:local("Source Sans Pro Regular"),local("SourceSans Pro-Regular"),local("Source Sans Pro 400"),local("SourceSans Pro-400"),local("Source Sans Pro"),url("../../Fonts/source-sans-pro/source-sans-pro-regular-webfont.woff?v=993db0ec4347") format("woff")
-}
+@font-face{font-family:"Source Sans Pro Bold";font-style:normal;font-weight:700;src:local("Source Sans Pro Bold Bold"),local("SourceSans Pro Bold-Bold"),local("Source Sans Pro Bold 700"),local("SourceSans Pro Bold-700"),url("https://cdn.sstatic.net/Fonts/source-sans-pro/source-sans-pro-bold-webfont.woff?v=f52ccc0bbce9") format("woff");}
 
-@font-face {
-  font-family:"Source Sans Pro Bold";font-style:normal;font-weight:700;src:local("Source Sans Pro Bold Bold"),local("SourceSans Pro Bold-Bold"),local("Source Sans Pro Bold 700"),local("SourceSans Pro Bold-700"),url("../../Fonts/source-sans-pro/source-sans-pro-bold-webfont.woff?v=f52ccc0bbce9") format("woff")
-}
+
+@font-face{font-family:"Roboto Slab";font-style:normal;font-weight:400;src:local("Roboto Slab Regular"),local("RobotoSlab-Regular"),local("Roboto Slab 400"),local("RobotoSlab-400"),local("Roboto Slab"),url("https://cdn.sstatic.net/Fonts/roboto-slab/roboto-slab-regular-webfont.woff?v=a75088a46d79") format("woff");}
+
+@font-face{font-family:"Roboto Slab Bold";font-style:normal;font-weight:700;src:local("Roboto Slab Bold Bold"),local("RobotoSlab Bold-Bold"),local("Roboto Slab Bold 700"),local("RobotoSlab Bold-700"),url("https://cdn.sstatic.net/Fonts/roboto-slab/roboto-slab-bold-webfont.woff?v=719d1c709127") format("woff");}
+
+
+
 *,*::before,*::after{
   margin: 0;
   padding: 0;
@@ -143,6 +140,7 @@
 html{
   font-family: Arial,"Helvetica Neue",Helvetica,sans-serif;
   font-size: 10px;
+  color: var(--black-800);
 }
 .container{
   width: 100%;
@@ -158,6 +156,8 @@ ul{
 }
 a{
   text-decoration: none;
+  color: var(--blue-600);
+  cursor: pointer;
 }
 img{
   width: 100%;
@@ -193,6 +193,7 @@ header{
   left: 0;
   top: 0;
   z-index: 99;
+  box-shadow: var(--bs-sm);
 }
 .nav-container{
   width: 100%;
@@ -826,6 +827,7 @@ background-color: var(--black-050);
   display: block;
   color: var(--black-800);
   .btn{
+    font-size: 1.5rem;
     font-family: "Source Sans Pro Bold", sans-serif;
     font-weight: 700;
     padding: 1.5rem 1rem;
@@ -876,16 +878,18 @@ background-color: var(--black-050);
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  .question-title{
+    font-family: 'Roboto Slab Bold',serif;
+    font-weight: 900;
+    color: var(--black-800);
+    font-size: 3.4rem;
+    text-align: center;
+  }
 }
 .questions-header{
   margin: 3rem 0 6rem;
 }
-.question-title{
-  font-family: 'Roboto Slab Bold',serif;
-  font-weight: 900;
-  color: var(--black-800);
-  font-size: 3.4rem;
-}
+
 .questions-body{
   display: flex;
   justify-content: center;
@@ -953,4 +957,34 @@ background-color: var(--black-050);
   margin-top: 2rem;
   padding: 1.5rem 2.5rem;
 }
+.questions-footer{
+  margin: 20rem 0 10rem;
+  width: 100%;
+}
+.questions-grid{
+  margin-top: 6rem;
+  display: grid;
+  grid-template-columns:repeat(auto-fit,minmax(20rem,1fr));
+  grid-gap: 2.5rem;
+
+}
+.grid-item-img{
+  max-height: 15rem;
+  img{
+    width: auto;
+  }
+}
+.grid-item-title{
+  font-size: 1.9rem;
+  font-family: "Roboto Slab Bold",serif;
+  font-weight: 700;
+  margin:2rem 0;
+}
+.grid-item-description{
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1.5rem;
+  line-height: 19px;
+  font-weight: 400;
+}
+
 /* End Questions */
