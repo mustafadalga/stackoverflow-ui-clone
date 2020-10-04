@@ -170,6 +170,7 @@ img{
   font-size: 1.3rem;
   border-radius: 3px;
   transition: all 0.5s;
+  padding: 1.3rem 2.5rem;
 }
 .btn-orange{
   background-color:var(--orange);
@@ -221,14 +222,17 @@ nav{
 }
 .hamburger-menu-container.open{
   background-color: var(--silver-lighter);
-  .hamburger-menu .line:nth-of-type(1) {
-    transform: rotateZ(-45deg) translate(-0.3rem, 0.5rem);
-  }
-  .hamburger-menu .line:nth-of-type(2) {
-    display: none;
-  }
-  .hamburger-menu .line:nth-of-type(3) {
-    transform: rotateZ(45deg) translate(-0.2rem, -0.3rem);
+
+  .hamburger-menu{
+    .line:nth-of-type(1) {
+      transform: rotateZ(-45deg) translate(-0.3rem, 0.5rem);
+    }
+    .line:nth-of-type(2) {
+      display: none;
+    }
+    .line:nth-of-type(3) {
+      transform: rotateZ(45deg) translate(-0.2rem, -0.3rem);
+    }
   }
 
   .nav-dropdown-menu{
@@ -457,9 +461,6 @@ background-color: var(--black-050);
 }
 .hero-options{
   display: flex;
-  .btn{
-    padding: 1.3rem 2.5rem;
-  }
 }
 .btn-developers{
   background-color: var(--white);
@@ -520,10 +521,11 @@ background-color: var(--black-050);
     background-color: var(--white);
     box-shadow: var(--bs-md);
     border-radius: .7rem;
+    &:nth-child(1),&:nth-child(3){
+      margin-top:12rem;
+    }
   }
-  .option:nth-child(1),.option:nth-child(3){
-    margin-top:12rem;
-  }
+
   .option-title{
     color: var(--black-800);
     font-size: 2.1rem;
@@ -543,7 +545,6 @@ background-color: var(--black-050);
   }
   .option-link{
     color: var(--white);
-    padding: 1.3rem 2.5rem;
   }
 }
 
@@ -637,11 +638,6 @@ background-color: var(--black-050);
   max-width: 52.6rem;
   text-align: center;
   margin: 3rem 0 2rem;
-}
-.teams-details{
-  a{
-    padding: 1.3rem 2.5rem;
-  }
 }
 .teams-plan{
   display: flex;
@@ -773,9 +769,12 @@ background-color: var(--black-050);
   width: calc(100% - 6rem);
 }
 .btn-card{
+  font-size: 1.5rem;
+
   font-family: "Source Sans Pro Bold",sans-serif;
   font-weight: 700;
   padding: 1.5rem 1rem;
+  display: block;
   &:hover{
     background-color: var(--blue-500);
     color: var(--white);
@@ -828,9 +827,9 @@ background-color: var(--black-050);
   color: var(--black-800);
   .btn{
     font-size: 1.5rem;
-    font-family: "Source Sans Pro Bold", sans-serif;
-    font-weight: 700;
-    padding: 1.5rem 1rem;
+    font-family: "Source Sans Pro",sans-serif;
+    font-weight: 400;
+    padding: 1.2rem 2rem;
   }
 }
 .hire-icon{
@@ -988,3 +987,47 @@ background-color: var(--black-050);
 }
 
 /* End Questions */
+
+/* Jobs */
+.jobs{
+  background-color: var(--powder-100);
+  padding: 10rem 0;
+}
+.jobs-title{
+  font-size: 3.4rem;
+  font-weight: 700;
+  font-family: "Roboto Slab Bold", serif;
+  margin-bottom: 2rem;
+}
+.jobs-body{
+  display: flex;
+  align-items: center;
+}
+.jobs-items{
+  display: flex;
+  flex-basis: 90%;
+}
+.column{
+  display: flex;
+  flex-basis: 50%;
+}
+.jobs-item{
+  flex-basis: 50%;
+  background-color: var(--white);
+  box-shadow: var(--bs-md);
+  border-radius: .7rem;
+  padding: 1.8rem 2rem;
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-family: "Roboto Slab", serif;
+  font-weight: 400;
+  margin-right: 3rem;
+}
+.jobs-item-img{
+  width: 5rem;
+}
+.jobs-item-description{
+  margin-left: 2rem;
+}
+/* End Jobs */
