@@ -1132,6 +1132,7 @@ nav {
 
 .questions-grid {
   margin-top: 6rem;
+  padding: 0 5rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   grid-gap: 2.5rem;
@@ -1409,6 +1410,61 @@ nav {
   .teams-footer {
     width: 90%;
   }
+
+  .questions-content .question-title {
+    font-size: 2.3rem;
+  }
+
+  .questions-body {
+    flex-direction: column;
+    justify-content: initial;
+  }
+
+  .questions-body-items {
+    display: flex;
+  }
+
+  .questions-body-item {
+    flex-basis: 33%;
+    flex-direction: column;
+    padding: 1rem;
+    justify-content: center;
+    text-align: center;
+    margin: 0;
+  }
+
+  .question-item-text {
+    margin-left: initial;
+    margin-top: 1rem;
+  }
+
+  .question-arrow-right, .question-arrow-left {
+    display: none;
+  }
+
+  .questions-body-item-content {
+    margin: 2rem 0 0;
+    order: 3;
+  }
+
+  .question-item-content-img {
+    padding: 0 2rem;
+  }
+
+  .question-item-content-text {
+    font-size: 1.8rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .questions-grid-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 3rem;
+    text-align: center;
+  }
 }
 @media screen and (max-width: 640px) {
   .nav-icon {
@@ -1468,6 +1524,11 @@ nav {
   .teams-description {
     font-size: 1.4rem;
     line-height: 2rem;
+  }
+
+  .questions-grid {
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    padding: 0 9rem;
   }
 }
 /* End Media Queries */
