@@ -1242,6 +1242,19 @@ display: flex;
 
 
 /* Media Queries */
+@media screen and (max-width: 1100px) {
+  .for-businesses {
+    .option{
+      flex-direction: column;
+    }
+    .option-icon{
+      margin-bottom: 1.5rem;
+      img{
+        max-width: 7.6rem;
+      }
+    }
+  }
+}
 @media screen and (max-width: 810px) {
   .nav-brand{
     flex: initial;
@@ -1291,6 +1304,25 @@ display: flex;
       margin-top: initial;
     }
   }
+
+  .for-businesses {
+    .options {
+      flex-direction: column;
+    }
+    .option{
+      flex-direction: row;
+      margin-bottom: 2.5rem;
+      max-width: 35rem;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .option-icon{
+      margin-bottom: 0;
+      img{
+        max-width: initial;
+      }
+    }
+  }
 }
 @media screen and (max-width: 640px) {
   .nav-icon {
@@ -1324,6 +1356,12 @@ display: flex;
   .section-description{
     font-size: 1.4rem;
     line-height: 2rem;
+  }
+  .for-businesses{
+    .option-description{
+      font-size: 1.4rem;
+      line-height: 2rem;
+    }
   }
 }
 /* End Media Queries */
