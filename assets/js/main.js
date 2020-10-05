@@ -44,3 +44,36 @@ question_items.forEach(item=>{
         updateQuestionImage(this)
     })
 })
+
+
+
+/* Nav Search Hints */
+var nav_search=document.querySelector('.nav-search');
+var search=nav_search.querySelector('.search-container');
+var search_hint=nav_search.querySelector('.search-hints');
+var search_btn=document.querySelector('.search-btn');
+var search_input=search.querySelector('input');
+
+
+search.addEventListener('click',()=>{
+    search_hint.classList.add('open');
+})
+
+window.addEventListener('click', function(e){
+    if (!(nav_search.contains(e.target) || search_btn.contains(e.target))){
+        search_hint.classList.remove('open');
+    }
+});
+
+search_btn.addEventListener('click',()=>{
+
+    if (!nav_search.classList.contains('open')){
+        search_hint.classList.remove('open');
+    }
+    nav_search.classList.toggle('open');
+    search_input.focus();
+        setTimeout(()=>{
+            search_hint.classList.toggle('open');
+        },50)
+});
+
