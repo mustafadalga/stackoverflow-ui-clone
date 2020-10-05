@@ -559,7 +559,7 @@ nav {
 /* End Header */
 /* Hero */
 .hero {
-  background: url("https://cdn.sstatic.net/Img/home/illo-hero-full.svg?v=e2018a5f9272");
+  background-image: url("https://cdn.sstatic.net/Img/home/illo-hero-full.svg?v=e2018a5f9272");
   background-repeat: no-repeat;
   background-position: top center;
   background-color: #FFCF10;
@@ -580,8 +580,9 @@ nav {
 .hero-title {
   color: var(--black-800);
   font-family: "Roboto Slab Bold", serif;
+  font-weight: 700;
   font-weight: bold;
-  font-size: 6rem;
+  font-size: 5.5rem;
   text-align: center;
   max-width: 100%;
 }
@@ -1352,6 +1353,26 @@ nav {
 
   .nav-base-links {
     font-size: 1.1rem;
+  }
+
+  .hero {
+    background-image: url("https://cdn.sstatic.net/Img/home/illo-hero-small.svg?v=884735d21ea5");
+  }
+
+  .hero-title {
+    font-size: 3rem;
+  }
+
+  .hero-options {
+    flex-direction: column;
+  }
+
+  .btn-developers {
+    margin-bottom: 1rem;
+  }
+
+  .btn-businesses {
+    margin-left: initial;
   }
 }
 /* End Media Queries */
