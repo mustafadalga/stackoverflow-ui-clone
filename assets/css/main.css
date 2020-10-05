@@ -730,7 +730,7 @@ nav {
 /* End For Businesses */
 /* Teams*/
 .teams {
-  background: url("https://cdn.sstatic.net/Img/product/teams/illo-teams-pricing.svg?v=8afb8ac7c580");
+  background-image: url("https://cdn.sstatic.net/Img/product/teams/illo-teams-pricing.svg?v=8afb8ac7c580");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -849,7 +849,7 @@ nav {
   position: absolute;
   width: 90%;
   left: 5%;
-  top: -32px;
+  top: -3.7rem;
   padding: 1rem 2rem;
   background-color: var(--black-075);
   color: var(--black-800);
@@ -1391,6 +1391,24 @@ nav {
   .for-businesses .option-icon img {
     max-width: initial;
   }
+
+  .teams {
+    background-image: none;
+  }
+
+  .teams-plan {
+    width: 90%;
+  }
+  .teams-plan .card {
+    flex-basis: initial;
+  }
+  .teams-plan .card:nth-child(2) {
+    order: -1;
+  }
+
+  .teams-footer {
+    width: 90%;
+  }
 }
 @media screen and (max-width: 640px) {
   .nav-icon {
@@ -1435,6 +1453,19 @@ nav {
   }
 
   .for-businesses .option-description {
+    font-size: 1.4rem;
+    line-height: 2rem;
+  }
+
+  .teams-head {
+    padding: 0 6rem;
+  }
+
+  .teams-title {
+    font-size: 2.3rem;
+  }
+
+  .teams-description {
     font-size: 1.4rem;
     line-height: 2rem;
   }
