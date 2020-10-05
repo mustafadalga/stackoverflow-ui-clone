@@ -1166,6 +1166,10 @@ nav {
   padding: 10rem 0;
 }
 
+.jobs-content {
+  padding: 0 2rem;
+}
+
 .jobs-title {
   font-size: 3.4rem;
   font-weight: 700;
@@ -1180,12 +1184,14 @@ nav {
 
 .jobs-items {
   display: flex;
-  flex-basis: 90%;
+  flex-basis: 86%;
 }
-
-.column {
+.jobs-items .column {
   display: flex;
   flex-basis: 50%;
+}
+.jobs-items .column:nth-child(even) {
+  margin-left: 3rem;
 }
 
 .jobs-item {
@@ -1199,7 +1205,9 @@ nav {
   font-size: 1.5rem;
   font-family: "Roboto Slab", serif;
   font-weight: 400;
-  margin-right: 3rem;
+}
+.jobs-item:nth-child(even) {
+  margin-left: 3rem;
 }
 
 .jobs-item-img {
@@ -1320,6 +1328,25 @@ nav {
   }
   .for-businesses .option-icon img {
     max-width: 7.6rem;
+  }
+
+  .jobs-title {
+    text-align: center;
+  }
+
+  .jobs-body {
+    flex-direction: column;
+  }
+
+  .jobs-items {
+    flex-direction: column;
+  }
+  .jobs-items .column:nth-child(even) {
+    margin-left: initial;
+  }
+
+  .jobs-item {
+    margin-bottom: 3rem;
   }
 }
 @media screen and (max-width: 810px) {
@@ -1529,6 +1556,18 @@ nav {
   .questions-grid {
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     padding: 0 9rem;
+  }
+
+  .jobs-title {
+    font-size: 2.3rem;
+  }
+
+  .jobs-items .column {
+    flex-direction: column;
+  }
+  .jobs-items .jobs-item {
+    margin-left: initial;
+    margin-bottom: 2rem;
   }
 }
 /* End Media Queries */

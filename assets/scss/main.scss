@@ -1111,6 +1111,9 @@ background-color: var(--black-050);
   background-color: var(--powder-100);
   padding: 10rem 0;
 }
+.jobs-content{
+  padding: 0 2rem;
+}
 .jobs-title{
   font-size: 3.4rem;
   font-weight: 700;
@@ -1123,12 +1126,16 @@ background-color: var(--black-050);
 }
 .jobs-items{
   display: flex;
-  flex-basis: 90%;
+  flex-basis: 86%;
+  .column{
+    display: flex;
+    flex-basis: 50%;
+    &:nth-child(even){
+      margin-left: 3rem;
+    }
+  }
 }
-.column{
-  display: flex;
-  flex-basis: 50%;
-}
+
 .jobs-item{
   flex-basis: 50%;
   background-color: var(--white);
@@ -1140,8 +1147,11 @@ background-color: var(--black-050);
   font-size: 1.5rem;
   font-family: "Roboto Slab", serif;
   font-weight: 400;
-  margin-right: 3rem;
+  &:nth-child(even){
+    margin-left: 3rem;
+  }
 }
+
 .jobs-item-img{
   width: 5rem;
 }
@@ -1257,6 +1267,24 @@ display: flex;
       }
     }
   }
+  .jobs-title{
+    text-align: center;
+  }
+  .jobs-body{
+    flex-direction: column;
+  }
+  .jobs-items{
+    flex-direction: column;
+    .column{
+      &:nth-child(even){
+        margin-left:initial;
+      }
+    }
+  }
+  .jobs-item{
+    margin-bottom: 3rem;
+  }
+
 }
 @media screen and (max-width: 810px) {
   .nav-brand{
@@ -1440,5 +1468,18 @@ display: flex;
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     padding: 0 9rem;
   }
+  .jobs-title{
+    font-size: 2.3rem;
+  }
+  .jobs-items{
+    .column{
+      flex-direction: column;
+    }
+    .jobs-item{
+      margin-left: initial;
+      margin-bottom: 2rem;
+    }
+  }
+
 }
 /* End Media Queries */
