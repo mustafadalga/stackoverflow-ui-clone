@@ -1,14 +1,9 @@
-
-
-
 /*Hamburger Menu */
-
 var hamburger_menu = document.querySelector('.hamburger-menu-container');
 var button = hamburger_menu.querySelector('.hamburger-menu')
 button.addEventListener('click', (event) => {
     hamburger_menu.classList.toggle('open')
 })
-
 
 
 /*Questions Section */
@@ -25,27 +20,50 @@ let questions_img=[
 var questionsBody=document.querySelector('.questions-body');
 var question_items=questionsBody.querySelectorAll('.questions-body-item')
 var question_content_img=questionsBody.querySelector('.question-item-content-img')
+var question_item_isSelected=false;
 
 function resetActive(){
     question_items.forEach(item=>{
         item.classList.remove("active");
     })
 }
-function updateQuestionImage(item){
-    let id=item.getAttribute('data-id');
+function getDataId(item){
+    return item.getAttribute('data-id');
+}
+function changeImage(id){
     question_content_img.src=questions_img[id];
-
 }
 
 question_items.forEach(item=>{
     item.addEventListener('click',function (event){
+        question_item_isSelected=true;
         resetActive();
         this.classList.add('active')
-        updateQuestionImage(this)
+        changeImage(getDataId(item))
     })
 })
 
+/*Questions Animation*/
+var index=0;
+firstSlider();
+durationSlider();
 
+function firstSlider(){
+    changeImage(index)
+    question_items[index].classList.add('active');
+    index++;
+}
+
+function durationSlider(){
+    setInterval(()=>{
+        if (!question_item_isSelected){
+            changeImage(index)
+            resetActive();
+            question_items[index].classList.add('active');
+            index<questions_img.length-1 ? index++ : index=0;
+        }
+    },3000);
+}
 
 /* Nav Search Hints */
 var nav_search=document.querySelector('.nav-search');
@@ -53,7 +71,6 @@ var search=nav_search.querySelector('.search-container');
 var search_hint=nav_search.querySelector('.search-hints');
 var search_btn=document.querySelector('.search-btn');
 var search_input=search.querySelector('input');
-
 
 search.addEventListener('click',()=>{
     search_hint.classList.add('open');

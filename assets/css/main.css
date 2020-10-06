@@ -1618,6 +1618,11 @@ nav {
     padding: 0 3rem;
   }
 }
+@media screen and (max-width: 500px) {
+  .questions-grid {
+    padding: 0;
+  }
+}
 /* End Media Queries */
 
 /*# sourceMappingURL=main.css.map */
