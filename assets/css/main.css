@@ -1538,6 +1538,10 @@ nav {
     font-size: 1.1rem;
   }
 
+  .search-hint-body {
+    flex-direction: column;
+  }
+
   .hero {
     background-image: url("https://cdn.sstatic.net/Img/home/illo-hero-small.svg?v=884735d21ea5");
   }
