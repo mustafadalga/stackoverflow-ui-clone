@@ -1177,6 +1177,7 @@ background-color: var(--black-050);
   i {
     font-size: 4rem;
     margin-top: -2rem;
+    margin-bottom: 2rem;
   }
 }
 .footer-nav{
@@ -1235,11 +1236,21 @@ background-color: var(--black-050);
   ul {
 display: flex;
     li{
-      margin-right: 2rem;
+      margin-right: 1rem;
       a{
         color: var(--black-400);
+        font-size: 1.1rem;
       }
     }
+  }
+}
+.copyright{
+  color: var(--black-500);
+  font-size: 1.1rem;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-weight: 400;
+  a{
+    color: var(--black-400);
   }
 }
 .footer-robot-img{
@@ -1285,6 +1296,14 @@ display: flex;
     margin-bottom: 3rem;
   }
 
+}
+@media screen and (max-width: 830px){
+  .footer-content{
+    flex-wrap: wrap;
+  }
+  .social-media{
+    margin-bottom: 1rem;
+  }
 }
 @media screen and (max-width: 810px) {
   .nav-brand{
@@ -1419,67 +1438,78 @@ display: flex;
   .nav-icon {
     padding: 0 1rem;
   }
-    .nav-icon-text{
+  .nav-icon-text {
     display: none;
   }
-  .nav-base-links{
+  .nav-base-links {
     font-size: 1.1rem;
   }
 
-  .hero{
+  .hero {
     background-image: url("https://cdn.sstatic.net/Img/home/illo-hero-small.svg?v=884735d21ea5");
   }
-  .hero-title{
+  .hero-title {
     font-size: 3rem;
   }
-  .hero-options{
+  .hero-options {
     flex-direction: column;
   }
-  .btn-developers{
+  .btn-developers {
     margin-bottom: 1rem;
   }
-  .btn-businesses{
+  .btn-businesses {
     margin-left: initial;
   }
-  .section-title{
+  .section-title {
     font-size: 2.3rem;
   }
-  .section-description{
+  .section-description {
     font-size: 1.4rem;
     line-height: 2rem;
   }
-  .for-businesses{
-    .option-description{
+  .for-businesses {
+    .option-description {
       font-size: 1.4rem;
       line-height: 2rem;
     }
   }
-  .teams-head{
-    padding: 0 6rem ;
+  .teams-head {
+    padding: 0 6rem;
   }
-  .teams-title{
+  .teams-title {
     font-size: 2.3rem;
   }
-  .teams-description{
+  .teams-description {
     font-size: 1.4rem;
     line-height: 2rem;
   }
-  .questions-grid{
+  .questions-grid {
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     padding: 0 9rem;
   }
-  .jobs-title{
+  .jobs-title {
     font-size: 2.3rem;
   }
-  .jobs-items{
-    .column{
+  .jobs-items {
+    .column {
       flex-direction: column;
     }
-    .jobs-item{
+
+    .jobs-item {
       margin-left: initial;
       margin-bottom: 2rem;
     }
   }
-
+  .footer-icon {
+    display: none;
+  }
+  .footer-links-title {
+    a {
+      font-size: 1.1rem;
+    }
+  }
+  .footer-link {
+    font-size: 1.1rem;
+  }
 }
 /* End Media Queries */

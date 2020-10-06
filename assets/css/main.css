@@ -1238,6 +1238,7 @@ nav {
 .footer-icon i {
   font-size: 4rem;
   margin-top: -2rem;
+  margin-bottom: 2rem;
 }
 
 .footer-nav {
@@ -1303,9 +1304,20 @@ nav {
   display: flex;
 }
 .social-media ul li {
-  margin-right: 2rem;
+  margin-right: 1rem;
 }
 .social-media ul li a {
+  color: var(--black-400);
+  font-size: 1.1rem;
+}
+
+.copyright {
+  color: var(--black-500);
+  font-size: 1.1rem;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-weight: 400;
+}
+.copyright a {
   color: var(--black-400);
 }
 
@@ -1347,6 +1359,15 @@ nav {
 
   .jobs-item {
     margin-bottom: 3rem;
+  }
+}
+@media screen and (max-width: 830px) {
+  .footer-content {
+    flex-wrap: wrap;
+  }
+
+  .social-media {
+    margin-bottom: 1rem;
   }
 }
 @media screen and (max-width: 810px) {
@@ -1568,6 +1589,18 @@ nav {
   .jobs-items .jobs-item {
     margin-left: initial;
     margin-bottom: 2rem;
+  }
+
+  .footer-icon {
+    display: none;
+  }
+
+  .footer-links-title a {
+    font-size: 1.1rem;
+  }
+
+  .footer-link {
+    font-size: 1.1rem;
   }
 }
 /* End Media Queries */
