@@ -1,4 +1,4 @@
-# Stack Overflow Responsive UI Clone
+# Stack Overflow Landing Page Responsive UI Clone
 
 ### Demo
 * [Github Pages](https://mustafadalga.github.io/stackoverlow-ui-clone/)
