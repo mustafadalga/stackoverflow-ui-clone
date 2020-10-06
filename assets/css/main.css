@@ -967,12 +967,14 @@ nav {
   padding: 10rem 0;
 }
 .hire .container {
-  max-width: 80%;
+  display: flex;
+  justify-content: center;
+  padding: 0 5rem;
 }
 
 .hire-content {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(35rem, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(40rem, 1fr));
   grid-column-gap: 3rem;
   grid-row-gap: 6rem;
 }
@@ -994,7 +996,7 @@ nav {
 
 .hire-item-title {
   font-size: 2.7rem;
-  font-family: "Source Sans Pro Bold", sans-serif;
+  font-family: "Roboto Slab Bold", serif;
   font-weight: 700;
   margin: 1rem 0;
 }
@@ -1360,6 +1362,15 @@ nav {
   .jobs-item {
     margin-bottom: 3rem;
   }
+
+  .hire-content {
+    grid-template-columns: repeat(auto-fill, minmax(35rem, 1fr));
+  }
+}
+@media screen and (max-width: 850px) {
+  .hire-content {
+    grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+  }
 }
 @media screen and (max-width: 830px) {
   .footer-content {
@@ -1601,6 +1612,10 @@ nav {
 
   .footer-link {
     font-size: 1.1rem;
+  }
+
+  .hire .container {
+    padding: 0 3rem;
   }
 }
 /* End Media Queries */
